@@ -16,8 +16,10 @@ Including another URLconf
 from django.urls import path
 from django.contrib import admin
 from blog.views import index
+from blog.views import send_message
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('index/', index),
+    path('send_message/', send_message),
 ]
